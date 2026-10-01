@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>بوابة مشاريعي</title>
+ <!-- استدعاء خط Cairo من Google Fonts -->
+ <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet"> <!-- استدعاء مكتبة الأيقونات FontAwesome --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <style>
+ :root {
+ --primary-color: #6c5ce7;
+ --bg-gradient-1: #1a2a6c;
+ --bg-gradient-2: #b21f1f;
+ --bg-gradient-3: #fdbb2d;
+ }
+
+ body {
+ margin: 0;
+ padding: 0;
+ font-family: 'Cairo', sans-serif;
+ background: linear-gradient(135deg, var(--bg-gradient-1), var(--bg-gradient-2), var(--bg-gradient-3));
+ background-size: 400% 400%;
+ animation: gradientBG 15s ease infinite;
+ min-height: 100vh;
+ color: #fff;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ }
+
+ @keyframes gradientBG {
+ 0% { background-position: 0% 50%; }
+ 50% { background-position: 100% 50%; }
+ 100% { background-position: 0% 50%; }
+ }
+
+ header {
+ text-align: center;
+ margin-top: 50px;
+ margin-bottom: 40px;
+ }
+
+ header h1 {
+ font-size: 2.5rem;
+ font-weight: 800;
+ margin: 0;
+ text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+ }
+
+ header p {
+ font-size: 1.1rem;
+ color: rgba(255, 255, 255, 0.8);
+ margin-top: 10px;
+ }
+
+ .container {
+ width: 90%;
+ max-width: 1200px;
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: 20px;
+ padding-bottom: 50px;
+ }
+
+ /* استعلامات الوسائط (Responsive Design) */
+ @media (max-width: 992px) {
+ .container { grid-template-columns: repeat(3, 1fr); }
+ }
+ @media (max-width: 768px) {
+ .container { grid-template-columns: repeat(2, 1fr); }
+ }
+ @media (max-width: 480px) {
+ .container { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+ header h1 { font-size: 2rem; }
+ }
+
+ .card {
+ background: rgba(255, 255, 255, 0.1);
+ backdrop-filter: blur(10px);
+ -webkit-backdrop-filter: blur(10px);
+ border: 1px solid rgba(255, 255, 255, 0.2);
+ border-radius: 20px;
+ padding: 25px 15px;
+ text-align: center;
+ text-decoration: none;
+ color: #fff;
+ transition: all 0.3s ease;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+ }
+
+ .card:hover {
+ transform: translateY(-10px);
+ background: rgba(255, 255, 255, 0.2);
+ box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.3);
+ border-color: rgba(255, 255, 255, 0.4);
+ }
+
+ .card i {
+ font-size: 2.5rem;
+ margin-bottom: 15px;
+ color: #fff;
+ transition: transform 0.3s ease;
+ }
+
+ .card:hover i {
+ transform: scale(1.1);
+ color: var(--primary-color);
+ }
+
+ .card h3 {
+ margin: 0;
+ font-size: 1.2rem;
+ font-weight: 600;
+ text-transform: capitalize;
+ }
+ </style>
+</head>
+<body>
+
+ <header>
+ <h1>بوابة المشاريع</h1> <p>الوصول السريع لجميع التطبيقات والأدوات</p> </header>
+
+ <div class="container">
+ <a href="https://z3omohd.github.io/talk/" class="card" target="_blank">
+ <i class="fa-solid fa-comments"></i>
+ <h3>Talk</h3>
+ </a>
+ <a href="https://z3omohd.github.io/Faris/" class="card" target="_blank">
+ <i class="fa-solid fa-user-astronaut"></i>
+ <h3>Faris</h3>
+ </a>
+ <a href="https://z3omohd.github.io/salary/" class="card" target="_blank">
+ <i class="fa-solid fa-money-bill-wave"></i>
+ <h3>Salary</h3>
+ </a>
+ <a href="https://z3omohd.github.io/spend/" class="card" target="_blank">
+ <i class="fa-solid fa-wallet"></i>
+ <h3>Spend</h3>
+ </a>
+ <a href="https://z3omohd.github.io/convert/" class="card" target="_blank">
+ <i class="fa-solid fa-right-left"></i>
+ <h3>Convert</h3>
+ </a>
+ <a href="https://z3omohd.github.io/salary-data/" class="card" target="_blank">
+ <i class="fa-solid fa-chart-pie"></i>
+ <h3>Salary Data</h3>
+ </a>
+ <a href="https://z3omohd.github.io/life-tracker/" class="card" target="_blank">
+ <i class="fa-solid fa-heart-pulse"></i>
+ <h3>Life Tracker</h3>
+ </a>
+ <a href="https://z3omohd.github.io/sun/" class="card" target="_blank">
+ <i class="fa-solid fa-sun"></i>
+ <h3>Sun</h3>
+ </a>
+ <a href="https://z3omohd.github.io/cm/" class="card" target="_blank">
+ <i class="fa-solid fa-ruler"></i>
+ <h3>CM</h3>
+ </a>
+ <a href="https://z3omohd.github.io/period/" class="card" target="_blank">
+ <i class="fa-solid fa-calendar-alt"></i>
+ <h3>Period</h3>
+ </a>
+ <a href="https://z3omohd.github.io/events/" class="card" target="_blank">
+ <i class="fa-solid fa-calendar-check"></i>
+ <h3>Events</h3>
+ </a>
+ <a href="https://z3omohd.github.io/timer/" class="card" target="_blank">
+ <i class="fa-solid fa-stopwatch"></i>
+ <h3>Timer</h3>
+ </a>
+ <a href="https://z3omohd.github.io/control/" class="card" target="_blank">
+ <i class="fa-solid fa-sliders"></i>
+ <h3>Control</h3>
+ </a>
+ <a href="https://z3omohd.github.io/term/" class="card" target="_blank">
+ <i class="fa-solid fa-terminal"></i>
+ <h3>Term</h3>
+ </a>
+ <a href="https://z3omohd.github.io/sport/" class="card" target="_blank">
+ <i class="fa-solid fa-person-running"></i>
+ <h3>Sport</h3>
+ </a>
+ <a href="https://z3omohd.github.io/calend/" class="card" target="_blank">
+ <i class="fa-solid fa-calendar-days"></i>
+ <h3>Calend</h3>
+ </a>
+ </div>
+
+</body>
+</html>
